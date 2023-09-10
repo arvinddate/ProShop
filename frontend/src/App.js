@@ -1,8 +1,26 @@
-import React from 'react'
-
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './Components/Header';
+import { Container } from 'react-bootstrap';
+import Footer from './Components/Footer';
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
-    <h1>Proshop</h1>
+    <>
+    <Header />
+    <main className='py-3'>
+      <Container>
+      <Outlet />
+
+      </Container>
+      
+
+    </main>
+    <Footer />
+    <ToastContainer />
+
+    </>
   );
 }
 
